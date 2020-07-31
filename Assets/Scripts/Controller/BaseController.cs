@@ -7,8 +7,10 @@ namespace Controller
     {
         #region Properties
 
-        protected UiInterface UiInterface;
-
+        protected UiInterface UiInterface { get; }
+        
+        public bool IsActive { get; private set; }
+        
         #endregion
 
         
@@ -20,7 +22,7 @@ namespace Controller
 
         #region Methods
 
-        public bool IsActive { get; private set; }
+        
 
         public virtual void On()
         {

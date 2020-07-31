@@ -10,26 +10,73 @@ namespace Model
     {
         #region Fields
 
-        [SerializeField] private float _speed = 11;
-        [SerializeField] private float _batteryChargeMax;
-        [SerializeField] private float Intensity = 1.5f;
+        [SerializeField] private float _speedRotation = 11f;
+        [SerializeField] private float _batteryChargeMax = 20f;
+        [SerializeField] private float _percentLowBatteryCharge = 20f;
+        [SerializeField] private float _percentFullBatteryCharge = 80f;
+
         private Light _light;
         private Transform _goFollow;
-        private Vector3 _vecOffset;
-        private float _share;
-        private float _takeAwayTheIntensity;
+        private Vector3 _vectorOffset;
+        private readonly Color _fullChargeBatteryColor = Color.green;
+        private readonly Color _lowChargeBatteryColor = Color.yellow;
+        private readonly Color _mediumChargeBatteryColor = Color.black;
+        private readonly Color _chargingBatteryColor = Color.blue;
+        private Color _currentBatteryColor;
+
+        private readonly Color _lowChargeBarColor = Color.red;
+        private readonly Color _normalChargeBarColor = Color.white;
+        private Color _currentBarColor;
 
         #endregion
 
-        
+
         #region Properties
 
-        public float Charge => BatteryChargeCurrent / _batteryChargeMax;
         public float BatteryChargeCurrent { get; private set; }
+
+        public float BatteryPercentChargeCurrent => BatteryChargeCurrent / _batteryChargeMax;
+
+        public Color GetColorBattery
+        {
+            get
+            {
+                if (!_light.enabled)
+                {
+                    _currentBatteryColor = _chargingBatteryColor;
+                }
+                else
+                if (BatteryChargeCurrent >= (_percentFullBatteryCharge * 0.01 * _batteryChargeMax))
+                {
+                    _currentBatteryColor = _fullChargeBatteryColor;
+                }
+                else if (BatteryChargeCurrent <= (_percentLowBatteryCharge * 0.01 * _batteryChargeMax))
+                {
+                    _currentBatteryColor = _lowChargeBatteryColor;
+                }
+                else
+                {
+                    _currentBatteryColor = _mediumChargeBatteryColor;
+                }
+                return _currentBatteryColor;
+            }
+        }
+
+        public Color GetColorBar
+        {
+            get
+            {
+                if (BatteryChargeCurrent >= (_percentLowBatteryCharge * 0.01 * _batteryChargeMax))
+                    _currentBarColor = _normalChargeBarColor;
+                else
+                    _currentBarColor = _lowChargeBarColor;
+                return _currentBarColor;
+            }
+        }
 
         #endregion
 
-        
+
         #region UnityMethods
 
         protected override void Awake()
@@ -37,16 +84,13 @@ namespace Model
             base.Awake();
             _light = GetComponent<Light>();
             _goFollow = Camera.main.transform;
-            _vecOffset = transform.position - _goFollow.position;
+            _vectorOffset = Transform.position - _goFollow.position;
             BatteryChargeCurrent = _batteryChargeMax;
-            _light.intensity = Intensity;
-            _share = _batteryChargeMax / 4;
-            _takeAwayTheIntensity = Intensity / (_batteryChargeMax * 100);
         }
 
         #endregion
 
-        
+
         #region Methods
 
         public void Switch(FlashLightActiveType value)
@@ -55,10 +99,8 @@ namespace Model
             {
                 case FlashLightActiveType.On:
                     _light.enabled = true;
-                    transform.position = _goFollow.position + _vecOffset;
-                    transform.rotation = _goFollow.rotation;
-                    break;
-                case FlashLightActiveType.None:
+                    Transform.position = _goFollow.position + _vectorOffset;
+                    Transform.rotation = _goFollow.rotation;
                     break;
                 case FlashLightActiveType.Off:
                     _light.enabled = false;
@@ -70,46 +112,39 @@ namespace Model
 
         public void Rotation()
         {
-            transform.position = _goFollow.position + _vecOffset;
-            transform.rotation = Quaternion.Lerp(transform.rotation,
-                _goFollow.rotation, _speed * Time.deltaTime);
+            Transform.position = _goFollow.position + _vectorOffset;
+            Transform.rotation = Quaternion.Lerp(
+                Transform.rotation,
+                _goFollow.rotation,
+                _speedRotation * Time.deltaTime);
         }
 
-        public bool EditBatteryCharge()
+        public bool BatteryUsage()
         {
+            var result = false;
             if (BatteryChargeCurrent > 0)
             {
                 BatteryChargeCurrent -= Time.deltaTime;
-
-                if (BatteryChargeCurrent < _share)
-                {
-                    _light.enabled = Range(0, 100) >= Range(0, 10);
-                }
-                else
-                {
-                    _light.intensity -= _takeAwayTheIntensity;
-                }
-
-                return true;
+                result = true;
             }
-
-            return false;
+            return result;
         }
 
-        public bool LowBattery()
-        {
-            return BatteryChargeCurrent <= _batteryChargeMax / 2;
-        }
-
-        public bool BatteryRecharge()
+        public void ChargeBattery()
         {
             if (BatteryChargeCurrent < _batteryChargeMax)
             {
                 BatteryChargeCurrent += Time.deltaTime;
-                return true;
             }
+        }
 
-            return false;
+        public void ChargeBattery(float delta)
+        {
+            BatteryChargeCurrent += delta;
+            if (BatteryChargeCurrent > _batteryChargeMax)
+            {
+                BatteryChargeCurrent = _batteryChargeMax;
+            }
         }
 
         #endregion

@@ -8,9 +8,11 @@ namespace View
         #region Fields
 
         private FlashLightUiText _flashLightUiText;
+        private FlashLightUiBar _flashLightUiBar;
+        private WeaponUiText _weaponUiText;
+        private SelectionObjMessageUi _selectionObjMessageUi;
 
         #endregion
-
 
 
         #region Properties
@@ -25,7 +27,6 @@ namespace View
             }
         }
 
-        private FlashLightUiBar _flashLightUiBar;
 
         public FlashLightUiBar FlashLightUiBar
         {
@@ -37,7 +38,6 @@ namespace View
             }
         }
 
-        private WeaponUiText _weaponUiText;
 
         public WeaponUiText WeaponUiText
         {
@@ -49,7 +49,6 @@ namespace View
             }
         }
 
-        private SelectionObjMessageUi _selectionObjMessageUi;
 
         public SelectionObjMessageUi SelectionObjMessageUi
         {
