@@ -15,6 +15,10 @@ namespace Controller
         private KeyCode _cancel = KeyCode.Escape;
         private KeyCode _reloadClip = KeyCode.R;
         private KeyCode _removeWeapon = KeyCode.T;
+        private KeyCode _selectWeapon1 = KeyCode.Alpha1;
+        private KeyCode _selectWeapon2 = KeyCode.Alpha2;
+        private KeyCode _selectWeapon3 = KeyCode.Alpha3;
+        private KeyCode _selectWeapon4 = KeyCode.Alpha4;
         private int _mouseButton = (int)MouseButton.LeftButton;
 
         #endregion
@@ -41,9 +45,14 @@ namespace Controller
             {
                 ServiceLocator.Resolve<FlashLightController>().Switch();
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(_selectWeapon1))
             {
                 SelectWeapon(0);
+            }
+
+            if (Input.GetKeyDown(_selectWeapon2))
+            {
+                SelectWeapon(1);
             }
             else if (Input.GetKeyDown(_cancel))
             {
