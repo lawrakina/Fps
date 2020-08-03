@@ -31,6 +31,7 @@
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="PoolController.cs" t="Include" />
             <e p="SelectionController.cs" t="Include" />
             <e p="TimeRemaining" t="Include">
               <e p="ITimeRemaining.cs" t="Include" />

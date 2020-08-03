@@ -20,14 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="010e0cd0-5024-4691-834b-cb9cef647312" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BaseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/FlashLightController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/FlashLightController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/FlashLightModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/FlashLightModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Aim-Bear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Aim-Bear.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IInitialization.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IMotor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/SelectionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ServiceLocator/ServiceLocator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,10 +113,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/SelectionController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/WeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Bullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Aim.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Vision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Patrol.cs" />
@@ -125,7 +124,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/BulletProjector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/CustumDebug.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/InfoCollision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/UnitMotor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Environment.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Wall.cs" />
@@ -135,13 +133,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/View/AimUiText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/SelectionObjMessageUi.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/View/UiInterface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/WeaponUiText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/FlashLightController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InputController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BaseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/FlashLightModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/View/UiInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/FlashLightController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" />
       </list>
     </option>
   </component>
@@ -185,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596175626140</updated>
       <workItem from="1596175633645" duration="5481000" />
-      <workItem from="1596192819051" duration="1692000" />
+      <workItem from="1596192819051" duration="5304000" />
     </task>
     <servers />
   </component>

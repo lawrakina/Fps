@@ -108,4 +108,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 0}
   Transform: {fileID: 0}
-  _projector: {fileID: 0}
+  _projector: {fileID: 4103674986805714481, guid: 7e1d9c99fd1a6b246b625dab8c0418f7,
+    type: 3}

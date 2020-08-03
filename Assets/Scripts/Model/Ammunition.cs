@@ -1,4 +1,6 @@
-﻿using Enums;
+﻿using Controller;
+using Controller.TimeRemaining;
+using Enums;
 using UnityEngine;
 
 
@@ -12,6 +14,8 @@ namespace Model
         [SerializeField] private float _baseDamage = 10;
         protected float _curDamage;
         private float _lossOfDamageAtTime = 0.2f;
+        private ITimeRemaining _timePutToPool;
+
 
         public AmmunitionType Type = AmmunitionType.Bullet;
 
@@ -28,7 +32,9 @@ namespace Model
 
         private void Start()
         {
-            DestroyAmmunition(_timeToDestruct);
+            _timePutToPool = new TimeRemaining(DestroyAmmunition, _timeToDestruct);
+            _timePutToPool.AddTimeRemaining();
+            // DestroyAmmunition(_timeToDestruct);
             InvokeRepeating(nameof(LossOfDamage), 0, 1);
         }
 
@@ -48,11 +54,14 @@ namespace Model
             _curDamage -= _lossOfDamageAtTime;
         }
 
-        protected void DestroyAmmunition(float timeToDestruct = 0)
+        protected void DestroyAmmunition()
         {
-            Destroy(gameObject, timeToDestruct);
-            CancelInvoke(nameof(LossOfDamage));
-            // Вернуть в пул
+            // Destroy(gameObject, timeToDestruct);
+            // CancelInvoke(nameof(LossOfDamage));
+
+            // DisableRigidBody();
+            _timePutToPool.RemoveTimeRemaining();
+            ServiceLocator.Resolve<PoolController>().PutToPool(this);
         }
 
         #endregion

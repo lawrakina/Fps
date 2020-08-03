@@ -34,6 +34,7 @@ namespace Controller
             ServiceLocator.SetService(new WeaponController());
             ServiceLocator.SetService(new Inventory());
             ServiceLocator.SetService(new BotController());
+            ServiceLocator.SetService(new PoolController());
 
             _executeControllers = new IExecute[6];
 
@@ -68,6 +69,7 @@ namespace Controller
             ServiceLocator.Resolve<SelectionController>().On();
             ServiceLocator.Resolve<PlayerController>().On();
             ServiceLocator.Resolve<BotController>().On();
+            ServiceLocator.Resolve<PoolController>().Init(Object.FindObjectOfType<GameController>().transform);
         }
 
         #endregion
