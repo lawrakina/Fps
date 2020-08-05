@@ -39,14 +39,14 @@ namespace Controller
         public void Execute()
         {
             if (!IsActive) return;
-            if (_playerModel.Xp <= 0)
+            if (_playerModel.Hp <= 0)
             {
                 Off();
             }
 
             _motor.Move();
 
-            UiInterface.PlayerXpUiText.Text = _playerModel.Xp;
+            UiInterface.PlayerXpUiText.Text = _playerModel.Hp;
             UiInterface.PlayerXpUiBar.Fill = _playerModel.PercentXp;
         }
 

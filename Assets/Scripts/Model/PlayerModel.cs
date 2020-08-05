@@ -9,7 +9,7 @@ namespace Model
     {
         #region Fields
 
-        [SerializeField] private float _xp = 100;
+        [SerializeField] private float _hp = 100;
         public event Action<PlayerModel> OnDieChange;
 
         #endregion
@@ -17,23 +17,23 @@ namespace Model
 
         #region Properties
 
-        public float Xp
+        public float Hp
         {
-            get { return _xp; }
-            set { _xp = value; } //todo добавить расчет коэффициента снижения урона по броне (все закешировать)
+            get { return _hp; }
+            set { _hp = value; } //todo добавить расчет коэффициента снижения урона по броне (все закешировать)
         } 
-        public float PercentXp => Xp; //todo добавить расчет по формуле: выносливость * 17 с занесением в кеш
+        public float PercentXp => Hp; //todo добавить расчет по формуле: выносливость * 17 с занесением в кеш
 
         #endregion
 
         public void OnCollision(InfoCollision info)
         {
-            if (Xp > 0)
+            if (Hp > 0)
             {
-                Xp -= info.Damage;
+                Hp -= info.Damage;
             }
 
-            if (Xp <= 0)
+            if (Hp <= 0)
             {
                 foreach (var child in GetComponentsInChildren<Transform>())
                 {
