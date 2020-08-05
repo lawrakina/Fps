@@ -11,6 +11,8 @@ namespace View
         private FlashLightUiBar _flashLightUiBar;
         private WeaponUiText _weaponUiText;
         private SelectionObjMessageUi _selectionObjMessageUi;
+        private PlayerXpUiText _playerXpUiText;
+        private PlayerXpUiBar _playerXpUiBar;
 
         #endregion
 
@@ -27,7 +29,6 @@ namespace View
             }
         }
 
-
         public FlashLightUiBar FlashLightUiBar
         {
             get
@@ -37,8 +38,7 @@ namespace View
                 return _flashLightUiBar;
             }
         }
-
-
+        
         public WeaponUiText WeaponUiText
         {
             get
@@ -49,7 +49,6 @@ namespace View
             }
         }
 
-
         public SelectionObjMessageUi SelectionObjMessageUi
         {
             get
@@ -59,6 +58,27 @@ namespace View
                 return _selectionObjMessageUi;
             }
         }
+        
+        public PlayerXpUiText PlayerXpUiText
+        {
+            get
+            {
+                if (!_playerXpUiText)
+                    _playerXpUiText = Object.FindObjectOfType<PlayerXpUiText>();
+                return _playerXpUiText;
+            }
+        }
+        
+        public PlayerXpUiBar PlayerXpUiBar
+        {
+            get
+            {
+                if (!_playerXpUiBar)
+                    _playerXpUiBar = Object.FindObjectOfType<PlayerXpUiBar>();
+                return _playerXpUiBar;
+            }
+        }
+
 
         #endregion
     }

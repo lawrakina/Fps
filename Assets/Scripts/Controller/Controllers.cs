@@ -67,7 +67,8 @@ namespace Controller
             ServiceLocator.Resolve<Inventory>().Initialization();
             ServiceLocator.Resolve<InputController>().On();
             ServiceLocator.Resolve<SelectionController>().On();
-            ServiceLocator.Resolve<PlayerController>().On();
+            // ServiceLocator.Resolve<PlayerController>().On();
+            ServiceLocator.Resolve<PlayerController>().Initialization();
             ServiceLocator.Resolve<BotController>().On();
             ServiceLocator.Resolve<PoolController>().Init(Object.FindObjectOfType<GameController>().transform);
         }

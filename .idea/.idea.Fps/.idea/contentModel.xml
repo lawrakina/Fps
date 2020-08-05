@@ -83,6 +83,7 @@
             <e p="FlashLightModel.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
+            <e p="PlayerModel.cs" t="Include" />
             <e p="UnitMotor.cs" t="Include" />
             <e p="Wall.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
@@ -95,6 +96,8 @@
             <e p="AimUiText.cs" t="Include" />
             <e p="FlashLightUiBar.cs" t="Include" />
             <e p="FlashLightUiText.cs" t="Include" />
+            <e p="PlayerXPUiBar.cs" t="Include" />
+            <e p="PlayerXpUiText.cs" t="Include" />
             <e p="SelectionObjMessageUi.cs" t="Include" />
             <e p="UiInterface.cs" t="Include" />
             <e p="WeaponUiText.cs" t="Include" />
