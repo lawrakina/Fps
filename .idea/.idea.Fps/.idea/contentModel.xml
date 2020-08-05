@@ -76,6 +76,7 @@
             <e p="Aim.cs" t="Include" />
             <e p="Ammunition.cs" t="Include" />
             <e p="BaseObjectScene.cs" t="Include" />
+            <e p="Battery.cs" t="Include" />
             <e p="Bullet.cs" t="Include" />
             <e p="Clip.cs" t="Include" />
             <e p="Environment.cs" t="Include" />
