@@ -76,10 +76,12 @@
             <e p="Aim.cs" t="Include" />
             <e p="Ammunition.cs" t="Include" />
             <e p="BaseObjectScene.cs" t="Include" />
+            <e p="BaseUnitModel.cs" t="Include" />
             <e p="Battery.cs" t="Include" />
             <e p="Bullet.cs" t="Include" />
             <e p="Clip.cs" t="Include" />
             <e p="Environment.cs" t="Include" />
+            <e p="FirstAid.cs" t="Include" />
             <e p="FlashLightModel.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />

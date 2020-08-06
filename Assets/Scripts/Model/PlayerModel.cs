@@ -3,28 +3,12 @@ using Helper;
 using Interface;
 using UnityEngine;
 
+
 namespace Model
 {
-    public sealed class PlayerModel : BaseObjectScene, ICollision
+    public sealed class PlayerModel : BaseUnitModel, ICollision
     {
-        #region Fields
-
-        [SerializeField] private float _hp = 100;
-        public event Action<PlayerModel> OnDieChange;
-
-        #endregion
-
-
-        #region Properties
-
-        public float Hp
-        {
-            get { return _hp; }
-            set { _hp = value; } //todo добавить расчет коэффициента снижения урона по броне (все закешировать)
-        } 
-        public float PercentXp => Hp; //todo добавить расчет по формуле: выносливость * 17 с занесением в кеш
-
-        #endregion
+        public event Action<BaseUnitModel> OnDieChange;
 
         public void OnCollision(InfoCollision info)
         {

@@ -7,15 +7,8 @@ using UnityEngine;
 
 namespace Model.Ai
 {
-    public class Bot : BaseObjectScene, IExecute
+    public class Bot : BaseUnitModel, IExecute
     {
-        #region Fields
-
-        private float Hp = 30;
-
-        #endregion
-
-
         #region Properties
 
         public Vision Vision;
@@ -210,16 +203,6 @@ namespace Model.Ai
 
                 OnDieChange?.Invoke(this);
             }
-        }
-
-        #endregion
-
-
-        #region ISelectObject
-
-        public string GetMessage()
-        {
-            return $"{name}, Hp:{Hp}";
         }
 
         #endregion
