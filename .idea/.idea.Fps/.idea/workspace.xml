@@ -20,19 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="010e0cd0-5024-4691-834b-cb9cef647312" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/FirstAid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/FirstAid.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Battery.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Battery.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/lighting.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/lighting.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Battery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Battery.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/PlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/PlayerXPUiBar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/CustumDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/ITimeRemaining.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/View/PlayerXpUiBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/Extention.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/EditPositionBotsAndFirstAids.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/InfoCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Environment.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,12 +78,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/WeaponController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/FirstAid.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Manager/TagManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DebugDrawingExtension/Example/Example.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ServiceLocator/ServiceLocatorMonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/FlashLightController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/View/AimUiText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Ai/BodyBot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Ai/HeadBot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/440D1D09-336D-46EE-B6BA-2229A55AC755/41/8d654875/Action`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiBar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -109,13 +112,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/ITimeRemaining.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemaining.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/AmmunitionType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums/FlashLightActiveType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/Reference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/SelectionController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/WeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Inventory.cs" />
@@ -154,12 +153,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/View/UiInterface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/ICollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/EditPositionBotsAndFirstAids.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/FirstAid.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/MineCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" />
       </list>
     </option>
   </component>
@@ -208,7 +211,9 @@
       <workItem from="1596628533732" duration="1000" />
       <workItem from="1596629105885" duration="10000" />
       <workItem from="1596634770450" duration="2992000" />
-      <workItem from="1596690980166" duration="2124000" />
+      <workItem from="1596690980166" duration="5519000" />
+      <workItem from="1596775983276" duration="8153000" />
+      <workItem from="1596787447932" duration="8652000" />
     </task>
     <servers />
   </component>
@@ -230,10 +235,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="503" y="269" key="RiderGenerateDialog" timestamp="1596179450294">
+    <state x="503" y="269" key="RiderGenerateDialog" timestamp="1596706519848">
       <screen x="0" y="0" width="1832" height="1080" />
     </state>
-    <state x="503" y="269" key="RiderGenerateDialog/0.0.1832.1080@0.0.1832.1080" timestamp="1596179450294" />
+    <state x="503" y="269" key="RiderGenerateDialog/0.0.1832.1080@0.0.1832.1080" timestamp="1596706519848" />
     <state x="249" y="188" key="SettingsEditor" timestamp="1596180216541">
       <screen x="0" y="0" width="1832" height="1080" />
     </state>

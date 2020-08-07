@@ -1,5 +1,9 @@
-﻿using Interface;
+﻿using System;
+using Controller.TimeRemaining;
+using Interface;
 using UnityEngine;
+using UnityEngine.AI;
+using Object = System.Object;
 
 
 namespace Model
@@ -9,6 +13,10 @@ namespace Model
         #region Fields
 
         [SerializeField] protected float _hp = 100;
+        [SerializeField] private float _timeToStun = 2.0f;
+        [HideInInspector] protected ITimeRemaining _enabledRigitBody;
+        [HideInInspector] protected ITimeRemaining _enabledNavMeshAgent;
+        [HideInInspector] protected ITimeRemaining _enabledCharacterController;
 
         #endregion
         
@@ -26,6 +34,26 @@ namespace Model
         
         
         #region Methods
+
+        private void Start()
+        {
+            _enabledRigitBody = new TimeRemaining(EnableKinematicRigitBody , _timeToStun);
+            _enabledNavMeshAgent = new TimeRemaining(EnableKinematicRigitBody , _timeToStun);
+            _enabledCharacterController = new TimeRemaining(EnableKinematicRigitBody , _timeToStun);
+        }
+
+        private void EnableKinematicRigitBody()
+        {
+            Rigidbody.isKinematic = true;
+        }
+        private void EnabledNavMeshAgent()
+        {
+            GetComponent<NavMeshAgent>().enabled = true;
+        }
+        private void EnabledCharacterController()
+        {
+            GetComponent<CharacterController>().enabled = true;
+        }
 
         public void OnHealing(float delta)
         {

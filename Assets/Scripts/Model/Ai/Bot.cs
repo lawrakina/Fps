@@ -4,6 +4,7 @@ using Enums;
 using Helper;
 using Interface;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Model.Ai
 {
@@ -130,13 +131,13 @@ namespace Model.Ai
             {
                 if (Math.Abs(Agent.stoppingDistance - _stoppingDistance) > Mathf.Epsilon)
                 {
-                    Debug.Log($"Agent.stoppingDistance {Agent.stoppingDistance}");
+                    // Debug.Log($"Agent.stoppingDistance {Agent.stoppingDistance}");
                     Agent.stoppingDistance = _stoppingDistance;
                 }
 
                 if (Vision.VisionM(transform, Target))
                 {
-                    Debug.Log($"Weapon.Fire(); {transform.name}, {Target.name}");
+                    // Debug.Log($"Weapon.Fire(); {transform.name}, {Target.name}");
                     Weapon.Fire();
                 }
                 else
@@ -196,7 +197,9 @@ namespace Model.Ai
                     {
                         tempRbChild = child.gameObject.AddComponent<Rigidbody>();
                     }
-                    //tempRbChild.AddForce(info.Dir * Random.Range(10, 300));
+
+                    tempRbChild.isKinematic = false;
+                    tempRbChild.AddForce(info.Dir * Random.Range(10, 300));
 
                     Destroy(child.gameObject, 10);
                 }

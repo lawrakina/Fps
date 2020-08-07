@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Unity\Projects\Fps" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="DebugDrawingExtension" t="Include">
+          <e p="DebugExtension.cs" t="Include" />
+          <e p="Example" t="Include">
+            <e p="Example.cs" t="Include" />
+          </e>
+          <e p="readme.txt" t="Include" />
+        </e>
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshAssetManager.cs" t="Include" />
@@ -40,6 +48,9 @@
               <e p="TimeRemainingExtensions.cs" t="Include" />
             </e>
             <e p="WeaponController.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="EditPositionBotsAndFirstAids.cs" t="Include" />
           </e>
           <e p="Enums" t="Include">
             <e p="AmmunitionType.cs" t="Include" />
@@ -85,6 +96,7 @@
             <e p="FlashLightModel.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
             <e p="Inventory.cs" t="Include" />
+            <e p="Mine.cs" t="Include" />
             <e p="PlayerModel.cs" t="Include" />
             <e p="UnitMotor.cs" t="Include" />
             <e p="Wall.cs" t="Include" />

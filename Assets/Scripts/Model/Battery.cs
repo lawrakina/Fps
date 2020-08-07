@@ -31,7 +31,7 @@ namespace Model
         {
             if(other.name !=  TagManager.PLAYER)
                 return;
-            Debug.Log(other.name);
+            // Debug.Log(other.name);
             ServiceLocator.Resolve<FlashLightController>().ChangeBattery(_lightPoints);
             Destroy(gameObject, 0.5f);
         }
