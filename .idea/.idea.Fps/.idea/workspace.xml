@@ -20,18 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="010e0cd0-5024-4691-834b-cb9cef647312" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IFixedExecute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interface/IFixedExecute.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Battery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Battery.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +105,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums/StateBot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IFixedExecute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/BulletProjector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,9 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/FlashLightActiveType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Helper/Reference.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/SelectionController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/WeaponController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Inventory.cs" />
@@ -124,7 +122,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Patrol.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/HeadBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/BodyBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/BulletProjector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/CustumDebug.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/InfoCollision.cs" />
@@ -151,7 +148,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/PlayerXpUiText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/UiInterface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/ICollision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/PlayerModel.cs" />
@@ -162,6 +158,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IExecute.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" />
       </list>
     </option>
@@ -213,7 +214,8 @@
       <workItem from="1596634770450" duration="2992000" />
       <workItem from="1596690980166" duration="5519000" />
       <workItem from="1596775983276" duration="8153000" />
-      <workItem from="1596787447932" duration="8652000" />
+      <workItem from="1596787447932" duration="8760000" />
+      <workItem from="1597215910374" duration="4055000" />
     </task>
     <servers />
   </component>

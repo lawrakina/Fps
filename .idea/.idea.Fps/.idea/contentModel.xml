@@ -69,6 +69,7 @@
           <e p="Interface" t="Include">
             <e p="ICollision.cs" t="Include" />
             <e p="IExecute.cs" t="Include" />
+            <e p="IFixedExecute.cs" t="Include" />
             <e p="IInitialization.cs" t="Include" />
             <e p="IMotor.cs" t="Include" />
             <e p="ISelectObj.cs" t="Include" />

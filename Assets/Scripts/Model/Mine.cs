@@ -90,8 +90,12 @@ namespace Model
                     {
                         void Enable()
                         {
-                            ITimeRemaining test = new TimeRemaining(delegate { item.GetComponent<CharacterController>().enabled = true; }, 2.0f);
-                            test.AddTimeRemaining();
+                            ITimeRemaining test = new TimeRemaining(delegate
+                            {
+                                
+                                item.GetComponent<CharacterController>().enabled = true;
+                            }, 2.0f);
+                            test.AddTimeRemainingExecute();
                         }
                         Enable();
                     }
@@ -100,7 +104,7 @@ namespace Model
                         void Enable()
                         {
                             ITimeRemaining test = new TimeRemaining(delegate { item.GetComponent<NavMeshAgent>().enabled = true; }, 2.0f);
-                            test.AddTimeRemaining();
+                            test.AddTimeRemainingExecute();
                         }
                         Enable();
                     }
@@ -109,7 +113,7 @@ namespace Model
                         void Enable()
                         {
                             ITimeRemaining test = new TimeRemaining(delegate { item.GetComponent<Rigidbody>().isKinematic = true; }, 2.0f);
-                            test.AddTimeRemaining();
+                            test.AddTimeRemainingExecute();
                         }
                         Enable();
                     }

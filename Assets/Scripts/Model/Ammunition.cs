@@ -33,7 +33,7 @@ namespace Model
         private void Start()
         {
             _timePutToPool = new TimeRemaining(DestroyAmmunition, _timeToDestruct);
-            _timePutToPool.AddTimeRemaining();
+            _timePutToPool.AddTimeRemainingExecute();
             // DestroyAmmunition(_timeToDestruct);
             InvokeRepeating(nameof(LossOfDamage), 0, 1);
         }
@@ -60,7 +60,7 @@ namespace Model
             // CancelInvoke(nameof(LossOfDamage));
 
             // DisableRigidBody();
-            _timePutToPool.RemoveTimeRemaining();
+            _timePutToPool.RemoveTimeRemainingExecute();
             ServiceLocator.Resolve<PoolController>().PutToPool(this);
         }
 

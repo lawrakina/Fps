@@ -7,38 +7,65 @@ namespace Controller.TimeRemaining
     {
         #region Fields
         
-        private static readonly List<ITimeRemaining> _timeRemainings = new List<ITimeRemaining>(10);
+        private static readonly List<ITimeRemaining> _timeRemainingsExecute = new List<ITimeRemaining>(63);
+        private static readonly List<ITimeRemaining> _timeRemainingsFixedExecute = new List<ITimeRemaining>(63);
         
         #endregion
         
         
         #region Properties
 
-        public static List<ITimeRemaining> TimeRemainings => _timeRemainings;
+        public static List<ITimeRemaining> TimeRemainingsExecute => _timeRemainingsExecute;
+        public static List<ITimeRemaining> TimeRemainingsFidexExecute => _timeRemainingsFixedExecute;
         
         #endregion
         
         
-        #region Methods
+        #region Execute
 
-        public static void AddTimeRemaining(this ITimeRemaining value)
+        public static void AddTimeRemainingExecute(this ITimeRemaining value)
         {
-            if (_timeRemainings.Contains(value))
+            if (_timeRemainingsExecute.Contains(value))
             {
                 return;
             }
 
             value.CurrentTime = value.Time;
-            _timeRemainings.Add(value);
+            _timeRemainingsExecute.Add(value);
         }
 
-        public static void RemoveTimeRemaining(this ITimeRemaining value)
+        public static void RemoveTimeRemainingExecute(this ITimeRemaining value)
         {
-            if (!_timeRemainings.Contains(value))
+            if (!_timeRemainingsExecute.Contains(value))
             {
                 return;
             }
-            _timeRemainings.Remove(value);
+            _timeRemainingsExecute.Remove(value);
+        }
+        
+        #endregion
+        
+        
+        #region FixedExecute
+
+        public static void AddTimeRemainingFixedExecute(this ITimeRemaining value)
+        {
+            if (_timeRemainingsFixedExecute.Contains(value))
+            {
+                return;
+            }
+
+            value.CurrentTime = value.Time;
+            _timeRemainingsFixedExecute.Add(value);
+        }
+
+        public static void RemoveTimeRemainingFixedExecute(this ITimeRemaining value)
+        {
+            if (!_timeRemainingsFixedExecute.Contains(value))
+            {
+                return;
+            }
+            _timeRemainingsFixedExecute.Remove(value);
         }
         
         #endregion

@@ -116,7 +116,7 @@ namespace Model.Ai
                             if ((_point - transform.position).sqrMagnitude <= 1)
                             {
                                 StateBot = StateBot.Inspection;
-                                _timeRemaining.AddTimeRemaining();
+                                _timeRemaining.AddTimeRemainingExecute();
                             }
                         }
                     }

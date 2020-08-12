@@ -11,6 +11,7 @@ namespace Controller
         #region Fields
 
         private readonly IExecute[] _executeControllers;
+        private readonly IFixedExecute[] _fixedExecutesControllers;
 
         #endregion
 
@@ -18,7 +19,9 @@ namespace Controller
         #region Properties
 
         public IExecute this[int index] => _executeControllers[index];
+        public IFixedExecute[] FixedExecute => _fixedExecutesControllers;
         public int Length => _executeControllers.Length;
+        public int FixedLenght => _fixedExecutesControllers.Length;
 
         #endregion
 
@@ -37,18 +40,15 @@ namespace Controller
             ServiceLocator.SetService(new PoolController());
 
             _executeControllers = new IExecute[6];
-
             _executeControllers[0] = ServiceLocator.Resolve<TimeRemainingController>();
-
             _executeControllers[1] = ServiceLocator.Resolve<PlayerController>();
-
             _executeControllers[2] = ServiceLocator.Resolve<FlashLightController>();
-
             _executeControllers[3] = ServiceLocator.Resolve<InputController>();
-
             _executeControllers[4] = ServiceLocator.Resolve<SelectionController>();
-
             _executeControllers[5] = ServiceLocator.Resolve<BotController>();
+            
+            _fixedExecutesControllers = new IFixedExecute[1];
+            _fixedExecutesControllers[0] = ServiceLocator.Resolve<TimeRemainingController>();
         }
 
 

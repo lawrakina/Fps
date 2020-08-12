@@ -25,7 +25,7 @@ namespace Model
             tempAmmunition.AddForce(_barrel.forward * _force);
             Clip.CountAmmunition--;
             _isReady = false;
-            _timeRemaining.AddTimeRemaining();
+            _timeRemaining.AddTimeRemainingExecute();
         }
 
         #endregion
@@ -53,7 +53,7 @@ namespace Model
             tempAmmunition.AddForce(_barrel.forward * _force);
             Clip.CountAmmunition--;
             _isReady = false;
-            _timeRemaining.AddTimeRemaining();
+            _timeRemaining.AddTimeRemainingExecute();
         }
 
         #endregion

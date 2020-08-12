@@ -5,11 +5,12 @@ using UnityEngine;
 
 namespace Controller.TimeRemaining
 {
-    public sealed class TimeRemainingController : IExecute
+    public sealed class TimeRemainingController : IExecute, IFixedExecute
     {
         #region Fields
         
-        private readonly List<ITimeRemaining> _timeRemainings;
+        private readonly List<ITimeRemaining> _timeRemainingsExecute;
+        private readonly List<ITimeRemaining> _timeRemainingsFixedExecute;
         
         #endregion
 
@@ -18,7 +19,8 @@ namespace Controller.TimeRemaining
 
         public TimeRemainingController()
         {
-            _timeRemainings = TimeRemainingExtensions.TimeRemainings;
+            _timeRemainingsExecute = TimeRemainingExtensions.TimeRemainingsExecute;
+            _timeRemainingsFixedExecute = TimeRemainingExtensions.TimeRemainingsFidexExecute;
         }
         
         #endregion
@@ -29,16 +31,16 @@ namespace Controller.TimeRemaining
         public void Execute()
         {
             var time = Time.deltaTime;
-            for (var i = 0; i < _timeRemainings.Count; i++)
+            for (var i = 0; i < _timeRemainingsExecute.Count; i++)
             {
-                var obj = _timeRemainings[i];
+                var obj = _timeRemainingsExecute[i];
                 obj.CurrentTime -= time;
                 if (obj.CurrentTime <= 0.0f)
                 {
                     obj?.Method?.Invoke();
                     if (!obj.IsRepeating)
                     {
-                        obj.RemoveTimeRemaining();
+                        obj.RemoveTimeRemainingExecute();
                     }
                     else
                     {
@@ -49,5 +51,27 @@ namespace Controller.TimeRemaining
         }
         
         #endregion
+
+        public void FixedExecute()
+        {
+            var time = Time.fixedDeltaTime;
+            for (var i = 0; i < _timeRemainingsFixedExecute.Count; i++)
+            {
+                var obj = _timeRemainingsFixedExecute[i];
+                obj.CurrentTime -= time;
+                if (obj.CurrentTime <= 0.0f)
+                {
+                    obj?.Method?.Invoke();
+                    if (!obj.IsRepeating)
+                    {
+                        obj.RemoveTimeRemainingFixedExecute();
+                    }
+                    else
+                    {
+                        obj.CurrentTime = obj.Time;
+                    }
+                }
+            }
+        }
     }
 }
