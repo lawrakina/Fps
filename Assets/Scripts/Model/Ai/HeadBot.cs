@@ -19,7 +19,7 @@ namespace Model.Ai
         public void OnCollision(InfoCollision info)
         {
             OnApplyDamageChange?.Invoke(new InfoCollision(info.Damage * 500,
-                info.Contact, info.ObjCollision, info.Dir));
+                info.Contact, info.ObjCollision, info.Direction));
         }
 
         #endregion

@@ -163,12 +163,13 @@ namespace Model.Ai
 
         #endregion
 
-        
+
         #region Methods
 
         public void MovePoint(Vector3 point)
         {
-            Agent.SetDestination(point);
+            if (Agent.enabled)
+                Agent.SetDestination(point);
         }
 
         private void ResetStateBot()
@@ -199,7 +200,7 @@ namespace Model.Ai
                     }
 
                     tempRbChild.isKinematic = false;
-                    tempRbChild.AddForce(info.Dir * Random.Range(10, 300));
+                    tempRbChild.AddForce(info.Direction * Random.Range(10, 300));
 
                     Destroy(child.gameObject, 10);
                 }

@@ -67,7 +67,8 @@ namespace Model
             }
 
             _moveVector.y = _gravityForce;
-            _characterController.Move(_moveVector * Time.deltaTime);
+            if(_characterController.enabled)
+                _characterController.Move(_moveVector * Time.deltaTime);
         }
 
         private void GamingGravity()

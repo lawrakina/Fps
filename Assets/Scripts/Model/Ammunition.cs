@@ -60,6 +60,7 @@ namespace Model
             // CancelInvoke(nameof(LossOfDamage));
 
             // DisableRigidBody();
+            //todo при отправке в пулл восстановить базовые значения _curDamage = _baseDamage
             _timePutToPool.RemoveTimeRemainingExecute();
             ServiceLocator.Resolve<PoolController>().PutToPool(this);
         }
