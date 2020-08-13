@@ -9,7 +9,7 @@ using UnityEngine.AI;
 
 namespace Model
 {
-    public abstract class BaseUnitModel : BaseObjectScene, ISelectObj
+    public abstract class BaseUnitModel : BaseObjectScene
     {
         #region Fields
 
@@ -76,8 +76,9 @@ namespace Model
                 tempObj.OnCollision(collision);
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnCollisionEnter(Collision other)
         {
+            //todo переделать на рейкаст под себя и состояние нахождения на земле
             //проверка на принадлежность касаемого объекта к окружению
             if ((LayerMask.NameToLayer(TagManager.LAYER_MASK_ENVIRONMENT) & (1 << other.gameObject.layer)) == 0)
             {
@@ -97,15 +98,5 @@ namespace Model
                 Hp += delta;
             }
         }
-
-
-        #region ISelectObject
-
-        public string GetMessage()
-        {
-            return $"{name}, Hp:{Hp}";
-        }
-
-        #endregion
     }
 }

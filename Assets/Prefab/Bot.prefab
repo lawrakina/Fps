@@ -96,12 +96,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2840597076023993930}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.49516445
+  m_Height: 1.992722
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.011716187, y: -0.0036389828, z: 0}
 --- !u!114 &8508417332267399468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +117,6 @@ MonoBehaviour:
   Rigidbody: {fileID: 0}
   Transform: {fileID: 0}
   _hp: 100
-  _timeToStun: 2
   Vision:
     ActiveDis: 21
     ActiveAng: 90
@@ -181,7 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9192161865026744912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -215,8 +214,8 @@ GameObject:
   - component: {fileID: 2169235254296785634}
   - component: {fileID: 2990156158365672001}
   - component: {fileID: 3592486674103680355}
-  m_Layer: 0
-  m_Name: Sphere
+  m_Layer: 8
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,8 +229,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6001642321609426168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.115, z: 0}
-  m_LocalScale: {x: 0.47716, y: 0.47716, z: 0.47716}
+  m_LocalPosition: {x: 0, y: 1.19, z: 0}
+  m_LocalScale: {x: 0.6200408, y: 0.6200408, z: 0.6200408}
   m_Children: []
   m_Father: {fileID: 4389014564997484995}
   m_RootOrder: 0
@@ -323,8 +322,8 @@ GameObject:
   - component: {fileID: 3631676750703801530}
   - component: {fileID: 6316763421317858555}
   - component: {fileID: 3334948132990992954}
-  m_Layer: 0
-  m_Name: Cylinder
+  m_Layer: 8
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

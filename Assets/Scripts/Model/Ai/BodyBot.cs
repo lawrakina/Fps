@@ -8,7 +8,6 @@ namespace Model.Ai
 {
     public sealed class BodyBot : MonoBehaviour, ICollision
     {
-
         #region Properties
 
         public event Action<InfoCollision> OnApplyDamageChange;
@@ -20,6 +19,7 @@ namespace Model.Ai
 
         public void OnCollision(InfoCollision info)
         {
+            Debug.Log($"BodyBot.OnCollision.Info:{info.Damage}");
             OnApplyDamageChange?.Invoke(info);
         }
 

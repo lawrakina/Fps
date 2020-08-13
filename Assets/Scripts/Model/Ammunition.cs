@@ -34,7 +34,7 @@ namespace Model
         {
             _timePutToPool = new TimeRemaining(DestroyAmmunition, _timeToDestruct);
             _timePutToPool.AddTimeRemainingExecute();
-            // DestroyAmmunition(_timeToDestruct);
+            
             InvokeRepeating(nameof(LossOfDamage), 0, 1);
         }
 
@@ -56,13 +56,16 @@ namespace Model
 
         protected void DestroyAmmunition()
         {
-            // Destroy(gameObject, timeToDestruct);
-            // CancelInvoke(nameof(LossOfDamage));
+            CancelInvoke(nameof(LossOfDamage));
 
-            // DisableRigidBody();
-            //todo при отправке в пулл восстановить базовые значения _curDamage = _baseDamage
+            ToDefault();
             _timePutToPool.RemoveTimeRemainingExecute();
             ServiceLocator.Resolve<PoolController>().PutToPool(this);
+        }
+
+        private void ToDefault()
+        {
+            _curDamage = _baseDamage;
         }
 
         #endregion

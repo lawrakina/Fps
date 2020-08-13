@@ -2,6 +2,7 @@
 using Controller.TimeRemaining;
 using Helper;
 using Interface;
+using Manager;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -34,6 +35,13 @@ namespace Model
         private void OnTriggerEnter(Collider other)
         {
             Boom();
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            // if((_mask & (1 << other.gameObject.layer)) == 0)
+            if(other.gameObject.layer == 8)
+               Boom();
         }
 
         private void Boom()

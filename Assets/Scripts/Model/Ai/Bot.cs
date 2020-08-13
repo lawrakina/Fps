@@ -4,18 +4,20 @@ using Enums;
 using Helper;
 using Interface;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
+
 
 namespace Model.Ai
 {
-    public class Bot : BaseUnitModel, IExecute
+    public class Bot : BaseUnitModel, IExecute, ISelectObj
     {
         #region Properties
 
         public Vision Vision;
         public Weapon Weapon; //todo с разным оружием 
         public Transform Target { get; set; }
-        public UnityEngine.AI.NavMeshAgent Agent { get; private set; }
+        public NavMeshAgent Agent { get; private set; }
         private float _waitTime = 3;
         private StateBot _stateBot;
         private Vector3 _point;
@@ -65,7 +67,7 @@ namespace Model.Ai
         protected override void Awake()
         {
             base.Awake();
-            Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+            Agent = GetComponent<NavMeshAgent>();
             Agent.stoppingDistance = _stoppingDistance;
             _timeRemaining = new TimeRemaining(ResetStateBot, _waitTime);
             Weapon.enabled = true;
@@ -200,13 +202,23 @@ namespace Model.Ai
                     }
 
                     tempRbChild.isKinematic = false;
-                    tempRbChild.AddForce(info.Direction * Random.Range(10, 300));
+                    tempRbChild.AddForce(info.Direction * Random.Range(10, 20));
 
                     Destroy(child.gameObject, 10);
                 }
 
                 OnDieChange?.Invoke(this);
             }
+        }
+
+        #endregion
+        
+        
+        #region ISelectObject
+
+        public string GetMessage()
+        {
+            return $"{name}, Hp:{Hp}";
         }
 
         #endregion

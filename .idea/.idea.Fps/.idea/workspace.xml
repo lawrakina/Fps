@@ -22,16 +22,19 @@
     <list default="true" id="010e0cd0-5024-4691-834b-cb9cef647312" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fps/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Mine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Mine.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helper/InfoCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helper/InfoCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helper/Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helper/Reference.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TagManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/TagManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/BodyBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/BodyBot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/HeadBot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ai/HeadBot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/UnitMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/UnitMotor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,8 +123,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Aim.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Vision.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Patrol.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/HeadBot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/BodyBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/BulletProjector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/CustumDebug.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/InfoCollision.cs" />
@@ -135,10 +136,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/View/WeaponUiText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BaseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/FlashLightController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InputController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/FlashLightModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/FlashLightUiBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/View/PlayerXPUiBar.cs" />
@@ -151,20 +149,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/FirstAid.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Battery.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/MineCollider.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IExecute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemainingController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/Controllers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controller/TimeRemaining/TimeRemaining.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/PlayerModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/UnitMotor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ammunition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseObjectScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Gun.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/PoolController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/BotController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helper/Reference.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Manager/TagManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Mine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/BaseUnitModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/HeadBot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/BodyBot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Model/Ai/Bot.cs" />
       </list>
     </option>
@@ -217,7 +220,7 @@
       <workItem from="1596690980166" duration="5519000" />
       <workItem from="1596775983276" duration="8153000" />
       <workItem from="1596787447932" duration="8760000" />
-      <workItem from="1597215910374" duration="15222000" />
+      <workItem from="1597215910374" duration="23621000" />
     </task>
     <servers />
   </component>

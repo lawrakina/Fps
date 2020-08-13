@@ -11,7 +11,7 @@ namespace Controller
     {
         #region Fields
 
-        private readonly int _countBot = 10;
+        private int _countBot;
         private readonly List<Bot> _botList = new List<Bot>();
 
         #endregion
@@ -21,6 +21,7 @@ namespace Controller
 
         public void Initialization()
         {
+            _countBot = ServiceLocatorMonoBehaviour.GetService<Reference>().BotsCount();
             for (var index = 0; index < _countBot; index++)
             {
                 var tempBot = Object.Instantiate(ServiceLocatorMonoBehaviour.GetService<Reference>().Bot,

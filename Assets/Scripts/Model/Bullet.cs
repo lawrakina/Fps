@@ -2,6 +2,7 @@
 using Interface;
 using UnityEngine;
 
+
 namespace Model
 {
     public sealed class Bullet : Ammunition

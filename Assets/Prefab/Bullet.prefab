@@ -112,8 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 0}
   Transform: {fileID: 0}
-  _timeToDestruct: 10
-  _baseDamage: 10
+  _timeToDestruct: 3
+  _baseDamage: 40
   Type: 4
 --- !u!54 &5061724686947266083
 Rigidbody:
@@ -130,7 +130,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 2
 --- !u!1 &7356973260123015214
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9637a32abce53d4187d12ff0de9e9e7, type: 2}
+  - {fileID: 2100000, guid: 917fbf6ab84d576428998b4687900a4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

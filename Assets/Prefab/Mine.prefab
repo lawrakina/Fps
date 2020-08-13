@@ -130,8 +130,8 @@ MonoBehaviour:
   Rigidbody: {fileID: 0}
   Transform: {fileID: 0}
   _radius: 5.71
-  _damagePoints: 20
-  _boomPower: 15
+  _damagePoints: 7
+  _boomPower: 3
   _mask:
     serializedVersion: 2
     m_Bits: 256

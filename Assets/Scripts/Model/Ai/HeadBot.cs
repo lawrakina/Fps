@@ -3,6 +3,7 @@ using Helper;
 using Interface;
 using UnityEngine;
 
+
 namespace Model.Ai
 {
     public sealed class HeadBot : MonoBehaviour, ICollision
@@ -18,6 +19,7 @@ namespace Model.Ai
 
         public void OnCollision(InfoCollision info)
         {
+            Debug.Log($"HeadBot.OnCollision.Info:{info.Damage}");
             OnApplyDamageChange?.Invoke(new InfoCollision(info.Damage * 500,
                 info.Contact, info.ObjCollision, info.Direction));
         }
